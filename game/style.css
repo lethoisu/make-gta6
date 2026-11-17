@@ -1,0 +1,128 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #14100c;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.hidden { display: none !important; }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 12, 20, 0.55);
+  z-index: 5;
+}
+
+.panel {
+  width: min(680px, 92vw);
+  padding: 34px 40px 28px;
+  border-radius: 18px;
+  background: rgba(16, 22, 34, 0.96);
+  border: 3px solid #ffcf3f;
+  color: #f5f1e6;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+.panel h1 {
+  margin: 0 0 4px;
+  font-size: 58px;
+  letter-spacing: 4px;
+  color: #ffcf3f;
+  text-shadow: 0 3px 0 #8e2f47, 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffb13d;
+}
+
+.story {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #e8e2d2;
+}
+
+.controls {
+  margin: 0 0 20px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #c9c2ae;
+}
+
+.controls p { margin: 0; }
+.controls b { color: #f5f1e6; }
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+button {
+  padding: 13px 28px;
+  border: 0;
+  border-radius: 10px;
+  background: #ffcf3f;
+  color: #1a1408;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover { background: #ffd95e; }
+button:active { transform: translateY(1px); }
+
+.note {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #8b93a3;
+}
+
+.corner-buttons {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 6;
+}
+
+.corner-buttons button {
+  background: rgba(16, 22, 34, 0.9);
+  color: #f5f1e6;
+  border: 2px solid #ffcf3f;
+}

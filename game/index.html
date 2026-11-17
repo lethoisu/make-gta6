@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solmar Bay — Sunset Run</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<canvas id="game" aria-label="Solmar Bay: an open-world crime game. Steal cars, outrun the police, and finish Sol's five jobs."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+
+<div id="title-overlay" class="overlay">
+  <div class="panel">
+    <h1>SOLMAR BAY</h1>
+    <p class="tagline">Sunset Run — an open-world crime story</p>
+    <p class="story">Jax Marlowe owes casino king Victor Kane a fortune. Fixer Sol Reyes
+      has five jobs that could clear the debt — if the Solmar Bay PD doesn't catch
+      Jax first. Steal cars, lose the heat, and pull off the Big Score.</p>
+    <div class="controls">
+      <p><b>WASD / arrows</b> — walk &amp; drive &nbsp;•&nbsp; <b>Shift</b> — run</p>
+      <p><b>E</b> — steal / leave car &nbsp;•&nbsp; <b>Space</b> — punch &nbsp;•&nbsp; <b>F / click</b> — shoot</p>
+      <p><b>P / Esc</b> — pause &nbsp;•&nbsp; <b>M</b> — mute &nbsp;•&nbsp; <b>R</b> — restart</p>
+    </div>
+    <div class="buttons">
+      <button id="btn-new" type="button">New Game</button>
+      <button id="btn-continue" type="button" class="hidden">Continue</button>
+    </div>
+    <p class="note">Progress saves automatically in this browser. A wholly original game —
+      its city, characters, vehicles, story, art and music are its own.</p>
+  </div>
+</div>
+
+<div class="corner-buttons">
+  <button id="btn-resume" type="button" class="hidden">Resume</button>
+  <button id="btn-restart" type="button" class="hidden">Restart</button>
+  <button id="btn-again" type="button" class="hidden">Play again</button>
+  <button id="btn-menu" type="button" class="hidden">Main menu</button>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
